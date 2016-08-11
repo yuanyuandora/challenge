@@ -1,0 +1,64 @@
+#navbar {
+  background-color: @mid-grey;
+  color: @nav-font-color;
+  margin-bottom: @grid-gutter-width*1.5;
+  .navbar-header {
+    background-color: @light-grey;
+  }
+  ul.menu {
+    .make-row();
+    @media (min-width: @screen-sm-min) {
+      height: @nav-height;
+    }
+    li {
+      float: none;
+      display: block;
+      a {
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: @nav-vertical-padding 0px;
+        line-height: @nav-height - @nav-vertical-padding*2;
+        color: @heading-color;
+        &:hover {
+          background-color: transparent;
+          color: @brand-red;
+        }
+        @media (max-width: @screen-xs-max) {
+          text-align: center;
+        }
+      }
+      &:last-child {
+
+        float: none;
+        width: 100%;
+        display: block;
+        a {
+          text-align: center;
+          color: #ffffff;
+          background-color: @brand-red;
+          &:hover {
+            background-color: @brand-red-hovered;
+          }
+        }
+        @media (min-width: @screen-md-min) {
+          width: 20%;
+        }
+      }
+      @media (min-width: @screen-sm-min) {
+        display: inline-block;
+        float: left;
+        padding-right: @grid-gutter-width;
+        &:last-child {
+          width: 12%;
+          float: right;
+          padding-right: 0px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: @screen-sm-min) {
+    background-color: @light-grey;
+  }
+}
+
